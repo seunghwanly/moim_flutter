@@ -5,11 +5,12 @@ enum CColor {
   darkGreen,
   lightGreen,
   orange,
-  largeTitle,
+  text,
   headline,
   tag,
   bubbleOthers,
-  white
+  white,
+  gradient
 }
 
 extension ColorExtension on CColor {
@@ -23,7 +24,7 @@ extension ColorExtension on CColor {
         return const Color(0xFFBFE299);
       case CColor.orange:
         return const Color(0xFFFD912E);
-      case CColor.largeTitle:
+      case CColor.text:
         return const Color(0xFF000000);
       case CColor.headline:
         return const Color(0xFF404040);
@@ -33,6 +34,8 @@ extension ColorExtension on CColor {
         return const Color(0xFFEFEFEF);
       case CColor.white:
         return const Color(0xFFFFFFFF);
+      default:
+        return const Color(0x00000000);
     }
   }
 
