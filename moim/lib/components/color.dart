@@ -39,10 +39,10 @@ extension ColorExtension on CColor {
     }
   }
 
-  LinearGradient get gradient => LinearGradient(
+  LinearGradient get ltr => LinearGradient(
         colors: [CColor.blue.color, CColor.lightGreen.color],
       );
-  LinearGradient get bubbleGradient => LinearGradient(
+  LinearGradient get ttb => LinearGradient(
         colors: [CColor.blue.color, CColor.lightGreen.color],
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,

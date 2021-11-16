@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moim/components/color.dart';
 
 enum CTypography {
   largeTitle,
@@ -14,19 +15,47 @@ extension TypographyExtension on CTypography {
   TextStyle get style {
     switch (this) {
       case CTypography.largeTitle:
-        return const TextStyle(fontWeight: FontWeight.w800, fontSize: 20);
+        return TextStyle(
+          fontWeight: FontWeight.w800,
+          fontSize: 20,
+          color: CColor.text.color,
+        );
       case CTypography.title:
-        return const TextStyle(fontWeight: FontWeight.w700, fontSize: 18);
+        return TextStyle(
+          fontWeight: FontWeight.w700,
+          fontSize: 18,
+          color: CColor.text.color,
+        );
       case CTypography.headline:
-        return const TextStyle(fontWeight: FontWeight.w600, fontSize: 16);
+        return TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 16,
+          color: CColor.text.color,
+        );
       case CTypography.body:
-        return const TextStyle(fontWeight: FontWeight.w400, fontSize: 14);
+        return TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
+          color: CColor.text.color,
+        );
       case CTypography.callOut:
-        return const TextStyle(fontWeight: FontWeight.w400, fontSize: 12);
+        return TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+          color: CColor.headline.color,
+        );
       case CTypography.subHead:
-        return const TextStyle(fontWeight: FontWeight.w600, fontSize: 13);
+        return TextStyle(
+          fontWeight: FontWeight.w600,
+          fontSize: 13,
+          color: CColor.headline.color,
+        );
       case CTypography.footNote:
-        return const TextStyle(fontWeight: FontWeight.w400, fontSize: 11);
+        return TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 11,
+          color: CColor.tag.color,
+        );
     }
   }
 }
