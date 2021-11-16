@@ -29,7 +29,30 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  # firebase
+  # firebase_core: ^1.10.0
+  # firebase_auth: ^3.2.0
+  # firebase_crashlytics: ^2.3.0
+  # flutter_firebase_chat_core: ^1.5.0
+  # firebase_storage: ^10.1.0
+  # relevant to API
+  geolocator: ^7.7.1
+  http: ^0.13.4
+  webview_flutter: ^2.3.1
+  # relevant to UI
+  liquid_progress_indicator: ^0.4.0
+  salomon_bottom_bar: ^3.1.0
+  flutter_chat_ui: ^1.5.1
+  ionicons: ^0.1.2
+  modal_bottom_sheet: ^2.0.0
+  flutter_svg: ^0.23.0+1
+  # relevant to ENV
+  flutter_config: ^2.0.0
+  shared_preferences: ^2.0.8
+  # relevant to State Management
+  flutter_bloc: ^7.3.3
+  get: ^4.3.8
+  equatable: ^2.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
