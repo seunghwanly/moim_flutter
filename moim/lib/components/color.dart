@@ -10,7 +10,8 @@ enum CColor {
   tag,
   bubbleOthers,
   white,
-  gradient
+  gradient,
+  border
 }
 
 extension ColorExtension on CColor {
@@ -34,6 +35,8 @@ extension ColorExtension on CColor {
         return const Color(0xFFEFEFEF);
       case CColor.white:
         return const Color(0xFFFFFFFF);
+      case CColor.border:
+        return const Color(0xFFD7D9DA);
       default:
         return const Color(0x00000000);
     }
@@ -43,7 +46,12 @@ extension ColorExtension on CColor {
         colors: [CColor.blue.color, CColor.lightGreen.color],
       );
   LinearGradient get ttb => LinearGradient(
-        colors: [CColor.blue.color, CColor.lightGreen.color],
+        colors: [
+          CColor.blue.color,
+          HSLColor.fromColor(CColor.lightGreen.color)
+              .withSaturation(1)
+              .toColor()
+        ].reversed.toList(),
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
       );
